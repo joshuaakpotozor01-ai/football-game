@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Football Match 3D</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="game-root"></div>
+
+    <div id="loading-screen" class="screen visible">
+      <div class="loading-panel">
+        <div class="brand">Football Match</div>
+        <div class="progress-wrap">
+          <div id="loading-bar"></div>
+        </div>
+        <div id="loading-text">Loading stadium...</div>
+      </div>
+    </div>
+
+    <div id="menu-screen" class="screen hidden">
+      <div class="menu-box">
+        <h1>Football Match</h1>
+
+        <div class="selector-row">
+          <div class="field-box">
+            <label>Home Team</label>
+            <select id="homeTeam">
+              <option>Manchester City</option>
+              <option>Arsenal</option>
+              <option>Real Madrid</option>
+              <option>Barcelona</option>
+              <option>PSG</option>
+              <option>Bayern</option>
+              <option>Chelsea</option>
+              <option>Juventus</option>
+            </select>
+          </div>
+
+          <div class="field-box">
+            <label>Away Team</label>
+            <select id="awayTeam">
+              <option>Barcelona</option>
+              <option>Arsenal</option>
+              <option>Manchester City</option>
+              <option>Real Madrid</option>
+              <option>PSG</option>
+              <option>Bayern</option>
+              <option>Chelsea</option>
+              <option>Juventus</option>
+            </select>
+          </div>
+        </div>
+
+        <button id="start-btn" class="primary-btn">Start Match</button>
+      </div>
+    </div>
+
+    <div id="hud" class="hidden">
+      <div class="scoreboard">
+        <div class="team-score">
+          <span class="badge home-badge"></span>
+          <span id="homeScore">0</span>
+        </div>
+        <div id="timer">90</div>
+        <div class="team-score">
+          <span class="badge away-badge"></span>
+          <span id="awayScore">0</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="message">Kick Off!</div>
+
+    <div id="controls" class="hidden">
+      <div class="stick-area" id="movePad">
+        <div class="stick" id="moveStick"></div>
+      </div>
+
+      <div class="action-area">
+        <button id="shotBtn" class="action-btn">SHOT</button>
+        <button id="passBtn" class="action-btn pass-btn">PASS</button>
+        <button id="resetBtn" class="action-btn reset-btn">RESET</button>
+      </div>
+    </div>
+
+    <script type="module" src="./game.js"></script>
+  </body>
+</html>
